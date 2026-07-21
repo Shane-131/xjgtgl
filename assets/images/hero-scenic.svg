@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2560" height="1440" viewBox="0 0 2560 1440">
+  <rect width="2560" height="1440" fill="#0f172a"/>
+  <rect width="2560" height="1440" fill="url(#bg)"/>
+  <path d="M0 976 C430 840 720 780 1040 860 C1380 948 1760 1024 2560 876 L2560 1440 L0 1440 Z" fill="#f59e0b" fill-opacity="0.22"/>
+  <path d="M0 1100 C460 960 760 928 1060 1040 C1400 1144 1830 1210 2560 1048 L2560 1440 L0 1440 Z" fill="#ffffff" fill-opacity="0.16"/>
+  <circle cx="1960" cy="310" r="220" fill="#fde68a" fill-opacity="0.75"/>
+  <rect x="220" y="180" width="620" height="260" rx="28" fill="#ffffff" fill-opacity="0.16"/>
+  <text x="270" y="288" font-family="Arial, sans-serif" font-size="58" fill="#ffffff">新疆风光</text>
+  <text x="270" y="350" font-family="Arial, sans-serif" font-size="34" fill="#ecfeff">自然与人文并存的旅行目的地</text>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f766e"/>
+      <stop offset="60%" stop-color="#1d4ed8"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+</svg>

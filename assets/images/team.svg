@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1067" viewBox="0 0 1600 1067">
+  <rect width="1600" height="1067" fill="#f8fafc"/>
+  <rect x="120" y="120" width="1360" height="827" rx="28" fill="#ffffff" stroke="#e2e8f0" stroke-width="4"/>
+  <circle cx="610" cy="440" r="170" fill="#0f766e" fill-opacity="0.8"/>
+  <circle cx="1040" cy="430" r="130" fill="#f59e0b" fill-opacity="0.8"/>
+  <rect x="360" y="680" width="320" height="120" rx="20" fill="#0f172a" fill-opacity="0.9"/>
+  <rect x="760" y="680" width="320" height="120" rx="20" fill="#0f172a" fill-opacity="0.9"/>
+  <text x="410" y="740" font-family="Arial, sans-serif" font-size="34" fill="#ffffff">资深向导</text>
+  <text x="810" y="740" font-family="Arial, sans-serif" font-size="34" fill="#ffffff">自有车队</text>
+  <text x="280" y="260" font-family="Arial, sans-serif" font-size="48" fill="#0f172a">本地团队 · 可靠出行</text>
+</svg>

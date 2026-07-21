@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="新疆高铁国际旅行社 - 专业新疆旅游服务，提供精品路线、定制旅行、团体接待。探索壮美新疆，从高铁国旅开始。">
+  <title>新疆高铁国际旅行社 | 探索壮美新疆</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              ink: '#1a2a3a',
+              teal: '#0d9488',
+              'teal-light': '#14b8a6',
+              gold: '#d4a574',
+              'gold-light': '#e8cfa6',
+              warm: '#fafaf8',
+            }
+          },
+          fontFamily: {
+            serif: ['Noto Serif SC', 'serif'],
+            sans: ['Noto Sans SC', 'sans-serif'],
+            display: ['Geist', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+
+  <!-- 自定义样式 -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-brand-warm text-brand-ink font-sans antialiased">
+
+  <!-- ==========================================
+       导航栏
+       ========================================== -->
+  <nav id="mainNav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500" style="background: transparent;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 md:h-20">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center group">
+          <img src="assets/images/logo.png" alt="新疆高铁国旅" class="h-14 md:h-16 w-auto transition-transform duration-300 group-hover:scale-105">
+        </a>
+
+        <!-- 桌面导航链接 -->
+        <div class="hidden md:flex items-center gap-8" id="navLinks">
+          <a href="index.html" class="nav-link text-sm font-medium text-white transition-colors duration-300" data-active="true">首页</a>
+          <a href="about.html" class="nav-link text-sm font-medium text-white/70 hover:text-white transition-colors duration-300" data-active="false">关于我们</a>
+          <a href="routes.html" class="nav-link text-sm font-medium text-white/70 hover:text-white transition-colors duration-300" data-active="false">路线推荐</a>
+          <a href="login.html" class="btn-primary text-sm !py-2 !px-5 !bg-white !text-brand-ink hover:!bg-white/90" id="navLoginBtn">
+            登录
+            <i class="ph ph-arrow-right text-sm"></i>
+          </a>
+        </div>
+
+        <!-- 移动端菜单按钮 -->
+        <button id="menuToggle" class="md:hidden relative w-10 h-10 flex items-center justify-center" aria-label="菜单">
+          <div class="flex flex-col gap-1.5">
+            <span class="block w-5 h-px bg-white transition-all duration-300" id="menuLine1"></span>
+            <span class="block w-5 h-px bg-white transition-all duration-300" id="menuLine2"></span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 移动端菜单 -->
+  <div id="mobileMenu" class="hidden fixed inset-0 z-40 bg-brand-warm/95 backdrop-blur-xl flex flex-col items-center justify-center gap-8">
+    <a href="index.html" class="text-2xl font-serif text-brand-teal">首页</a>
+    <a href="about.html" class="text-2xl font-serif text-brand-ink/70">关于我们</a>
+    <a href="routes.html" class="text-2xl font-serif text-brand-ink/70">路线推荐</a>
+    <a href="login.html" class="btn-primary text-lg mt-4">登录</a>
+  </div>
+
+  <!-- ==========================================
+       主内容区
+       ========================================== -->
+  <main id="mainContent" class="page-enter">
+
+    <!-- ======================================
+         Hero 区
+         视频背景占位 + Slogan + CTA
+         ====================================== -->
+    <section class="relative min-h-[100dvh] flex items-end pb-16 md:pb-0 md:items-center overflow-hidden">
+      <!-- Hero 视频背景 -->
+      <video
+        class="absolute inset-0 w-full h-full object-cover"
+        src="assets/video/hero.mp4"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto"
+      ></video>
+
+      <!-- 叠加渐变层，确保文字可读 -->
+      <div class="absolute inset-0 bg-gradient-to-b from-blue-900/40 via-blue-950/30 to-blue-950/70"></div>
+
+      <!-- 内容 -->
+      <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24">
+        <div class="max-w-3xl">
+          <!-- 品牌标签 -->
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 mb-6 md:mb-8">
+            <span class="w-1.5 h-1.5 rounded-full bg-brand-teal-light"></span>
+            <span class="text-xs md:text-sm font-medium text-white/90 tracking-wide">新疆高铁国际旅行社</span>
+          </div>
+
+          <!-- 主标题 -->
+          <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl text-white tracking-tighter leading-none mb-6">
+            探索壮美<br class="md:hidden">新疆
+          </h1>
+
+          <!-- 副标题 -->
+          <p class="text-white/75 text-base md:text-lg max-w-lg leading-relaxed mb-8 md:mb-10">
+            深耕新疆旅游十余载，依托铁路资源优势，以专业与热忱为每一位旅者开启非凡旅程
+          </p>
+
+          <!-- CTA -->
+          <div class="flex flex-col sm:flex-row gap-3">
+            <a href="routes.html" class="btn-primary text-base !bg-white !text-brand-ink hover:!bg-white/90">
+              浏览精选路线
+              <i class="ph ph-arrow-right text-lg"></i>
+            </a>
+            <a href="about.html" class="btn-outline !border-white/30 !text-white hover:!bg-white/10 hover:!border-white/50">
+              了解我们
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================
+         品牌简介区
+         左侧文字 + 右侧图片卡片
+         ====================================== -->
+    <section class="py-24 md:py-32 lg:py-40 reveal">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+          <!-- 左侧文字 -->
+          <div class="order-2 lg:order-1">
+            <h2 class="font-serif text-3xl md:text-5xl tracking-tight leading-tight mb-6">
+              连接天山的<br>每一段旅途
+            </h2>
+            <p class="text-brand-ink/60 leading-relaxed mb-6 max-w-[60ch]">
+              新疆高铁国际旅行社扎根新疆多年，依托高铁网络的便捷与天山南北的壮美风光，为每一位旅客精心打造难忘的新疆之旅。
+            </p>
+            <p class="text-brand-ink/60 leading-relaxed mb-8 max-w-[60ch]">
+              从亲子家庭的温馨出游到企业团队的深度拓展，从银发族的慢享之旅到高端定制的私享体验，我们用专业和热忱，让每一次出发都充满期待。
+            </p>
+            <a href="about.html" class="inline-flex items-center gap-2 text-brand-teal font-medium group">
+              了解更多
+              <i class="ph ph-arrow-right text-sm transition-transform duration-300 group-hover:translate-x-1"></i>
+            </a>
+          </div>
+
+          <!-- 右侧图片卡片 -->
+          <div class="order-1 lg:order-2">
+            <div class="relative">
+              <!-- 外层壳 -->
+              <div class="bg-brand-gold/10 rounded-3xl p-1.5">
+                <!-- 内层核心 -->
+                <div class="rounded-[calc(1.5rem-0.375rem)] overflow-hidden aspect-[4/5] inner-highlight bg-white">
+                  <img
+                    src="https://picsum.photos/seed/tianshan-snow-peak/800/1000"
+                    alt="新疆天山风光"
+                    class="w-full h-full object-cover"
+                    loading="lazy"
+                  >
+                </div>
+              </div>
+              <!-- 装饰几何纹样 -->
+              <div class="absolute -bottom-6 -right-6 w-24 h-24 opacity-10 pointer-events-none hidden md:block">
+                <svg viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 12h72v72H12z" stroke="currentColor" stroke-width="1" class="text-brand-teal"/>
+                  <path d="M24 24h48v48H24z" stroke="currentColor" stroke-width="1" class="text-brand-gold"/>
+                  <path d="M36 36h24v24H36z" stroke="currentColor" stroke-width="1" class="text-brand-teal"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================
+         精选路线预览
+         不对称 Bento 卡片网格
+         ====================================== -->
+    <section class="py-24 md:py-32 reveal">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- 区域标题 -->
+        <div class="mb-14 md:mb-20">
+          <h2 class="font-serif text-3xl md:text-5xl tracking-tight leading-tight mb-4">
+            精选路线
+          </h2>
+          <p class="text-brand-ink/50 text-base md:text-lg max-w-md">
+            从北疆草原到南疆古城，每一条路线都经过实地考察与精心打磨
+          </p>
+        </div>
+
+        <!-- Bento 网格：3 项 = 2+1 不对称 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
+
+          <!-- 卡片 1 - 占据较大空间 -->
+          <div class="group cursor-pointer transition-brand shadow-card rounded-3xl overflow-hidden bg-white inner-highlight">
+            <div class="relative aspect-[16/10] overflow-hidden">
+              <img
+                src="https://picsum.photos/seed/kanas-lake-winter/800/500"
+                alt="北疆雪域之旅"
+                class="w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:scale-105"
+                loading="lazy"
+              >
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-ink/40 to-transparent"></div>
+              <div class="absolute bottom-0 left-0 right-0 p-5 md:p-7">
+                <span class="inline-block px-2.5 py-1 rounded-full bg-white/15 backdrop-blur-md text-white text-xs font-medium mb-2">热门路线</span>
+              </div>
+            </div>
+            <div class="p-5 md:p-7">
+              <div class="flex items-center justify-between mb-2">
+                <h3 class="font-serif text-xl md:text-2xl tracking-tight group-hover:text-brand-teal transition-colors duration-300">北疆雪域之旅</h3>
+                <span class="font-display text-sm font-medium text-brand-gold whitespace-nowrap">7天6晚</span>
+              </div>
+              <p class="text-brand-ink/50 text-sm leading-relaxed">天山天池 · 喀纳斯湖 · 禾木村 · 赛里木湖</p>
+            </div>
+          </div>
+
+          <!-- 卡片 2 -->
+          <div class="group cursor-pointer transition-brand shadow-card rounded-3xl overflow-hidden bg-white inner-highlight">
+            <div class="relative aspect-[16/10] overflow-hidden">
+              <img
+                src="https://picsum.photos/seed/taklamakan-desert/800/500"
+                alt="南疆沙漠探险"
+                class="w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:scale-105"
+                loading="lazy"
+              >
+            </div>
+            <div class="p-5 md:p-7">
+              <div class="flex items-center justify-between mb-2">
+                <h3 class="font-serif text-xl md:text-2xl tracking-tight group-hover:text-brand-teal transition-colors duration-300">南疆沙漠探险</h3>
+                <span class="font-display text-sm font-medium text-brand-gold whitespace-nowrap">5天4晚</span>
+              </div>
+              <p class="text-brand-ink/50 text-sm leading-relaxed">塔克拉玛干沙漠 · 喀什古城 · 帕米尔高原 · 慕士塔格峰</p>
+            </div>
+          </div>
+
+          <!-- 卡片 3 - 横跨整行的特色路线 -->
+          <div class="md:col-span-2 group cursor-pointer transition-brand shadow-card rounded-3xl overflow-hidden bg-white inner-highlight">
+            <div class="grid grid-cols-1 md:grid-cols-5">
+              <div class="md:col-span-2 relative aspect-[16/10] md:aspect-auto overflow-hidden">
+                <img
+                  src="https://picsum.photos/seed/silk-road-kashgar/600/400"
+                  alt="丝绸之路文化之旅"
+                  class="w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:scale-105"
+                  loading="lazy"
+                >
+              </div>
+              <div class="md:col-span-3 p-5 md:p-7 flex flex-col justify-center">
+                <span class="inline-block px-2.5 py-1 rounded-full bg-brand-teal/10 text-brand-teal text-xs font-medium mb-2 w-fit">文化深度</span>
+                <div class="flex items-center justify-between mb-2">
+                  <h3 class="font-serif text-xl md:text-2xl tracking-tight group-hover:text-brand-teal transition-colors duration-300">丝绸之路文化之旅</h3>
+                  <span class="font-display text-sm font-medium text-brand-gold whitespace-nowrap ml-4">8天7晚</span>
+                </div>
+                <p class="text-brand-ink/50 text-sm leading-relaxed">吐鲁番火焰山 · 交河故城 · 克孜尔千佛洞 · 喀什老城</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- 查看全部按钮 -->
+        <div class="mt-10 text-center">
+          <a href="routes.html" class="btn-outline">
+            查看全部路线
+            <i class="ph ph-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================
+         信任背书区
+         数据展示 + 资质
+         ====================================== -->
+    <section class="py-24 md:py-32 reveal">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- 数据指标 -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-20">
+          <div class="text-center md:text-left">
+            <div class="font-display text-4xl md:text-5xl font-semibold text-brand-teal tracking-tight mb-2">14+</div>
+            <p class="text-sm text-brand-ink/50">年行业深耕</p>
+          </div>
+          <div class="text-center md:text-left">
+            <div class="font-display text-4xl md:text-5xl font-semibold text-brand-teal tracking-tight mb-2">50+</div>
+            <p class="text-sm text-brand-ink/50">条精品路线</p>
+          </div>
+          <div class="text-center md:text-left">
+            <div class="font-display text-4xl md:text-5xl font-semibold text-brand-teal tracking-tight mb-2">10万+</div>
+            <p class="text-sm text-brand-ink/50">服务旅客人次</p>
+          </div>
+          <div class="text-center md:text-left">
+            <div class="font-display text-4xl md:text-5xl font-semibold text-brand-teal tracking-tight mb-2">98%</div>
+            <p class="text-sm text-brand-ink/50">客户满意度</p>
+          </div>
+        </div>
+
+        <!-- 分隔装饰 -->
+        <div class="pattern-divider mb-20"></div>
+
+        <!-- 资质与服务承诺 -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div class="bg-white rounded-3xl p-7 shadow-card inner-highlight transition-brand hover:shadow-card-hover">
+            <div class="w-10 h-10 rounded-xl bg-brand-teal/10 flex items-center justify-center mb-4">
+              <i class="ph ph-certificate text-brand-teal text-xl"></i>
+            </div>
+            <h3 class="font-serif text-lg mb-2 tracking-tight">正规资质</h3>
+            <p class="text-brand-ink/50 text-sm leading-relaxed">持有国家旅游局颁发的旅行社经营许可证，合法合规经营，让您出行无忧</p>
+          </div>
+          <div class="bg-white rounded-3xl p-7 shadow-card inner-highlight transition-brand hover:shadow-card-hover">
+            <div class="w-10 h-10 rounded-xl bg-brand-teal/10 flex items-center justify-center mb-4">
+              <i class="ph ph-shield-check text-brand-teal text-xl"></i>
+            </div>
+            <h3 class="font-serif text-lg mb-2 tracking-tight">安全保障</h3>
+            <p class="text-brand-ink/50 text-sm leading-relaxed">全程旅游保险覆盖，专业导游团队持证上岗，应急处理机制完善</p>
+          </div>
+          <div class="bg-white rounded-3xl p-7 shadow-card inner-highlight transition-brand hover:shadow-card-hover">
+            <div class="w-10 h-10 rounded-xl bg-brand-teal/10 flex items-center justify-center mb-4">
+              <i class="ph ph-hand-heart text-brand-teal text-xl"></i>
+            </div>
+            <h3 class="font-serif text-lg mb-2 tracking-tight">本地优势</h3>
+            <p class="text-brand-ink/50 text-sm leading-relaxed">深耕新疆本地资源，与各大景区、酒店建立长期合作，为您争取最优价格和体验</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================
+         底部 CTA
+         ====================================== -->
+    <section class="py-24 md:py-32 reveal">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-brand-ink rounded-3xl p-8 md:p-14 lg:p-20 relative overflow-hidden">
+
+          <!-- 背景装饰 -->
+          <div class="absolute top-0 right-0 w-64 h-64 opacity-5 pointer-events-none">
+            <svg viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="128" cy="128" r="120" stroke="white" stroke-width="1"/>
+              <circle cx="128" cy="128" r="90" stroke="white" stroke-width="1"/>
+              <circle cx="128" cy="128" r="60" stroke="white" stroke-width="1"/>
+              <circle cx="128" cy="128" r="30" stroke="white" stroke-width="1"/>
+            </svg>
+          </div>
+
+          <div class="relative z-10 max-w-2xl">
+            <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl text-white tracking-tight leading-tight mb-4">
+              准备好开启您的新疆之旅了吗？
+            </h2>
+            <p class="text-white/55 text-base md:text-lg mb-8 leading-relaxed">
+              我们的旅行顾问随时为您提供专业的路线建议和个性化定制服务
+            </p>
+            <div class="flex flex-col sm:flex-row gap-3">
+              <a href="routes.html" class="btn-primary text-base !bg-brand-teal hover:!bg-brand-teal-light">
+                浏览路线
+                <i class="ph ph-map-pin"></i>
+              </a>
+              <a href="about.html" class="btn-outline !border-white/20 !text-white hover:!bg-white/10 hover:!border-white/40">
+                联系我们
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================
+       页脚
+       ========================================== -->
+  <footer class="border-t border-brand-ink/5 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+
+        <!-- 品牌列 -->
+        <div class="md:col-span-2">
+          <a href="index.html" class="flex items-center mb-4">
+            <img src="assets/images/logo.png" alt="新疆高铁国旅" class="h-9 w-auto">
+          </a>
+          <p class="text-brand-ink/45 text-sm leading-relaxed max-w-sm">
+            新疆高铁国际旅行社，专注新疆旅游服务。以专业和热忱，连接每一位旅者与天山的壮美。
+          </p>
+        </div>
+
+        <!-- 导航列 -->
+        <div>
+          <h4 class="font-medium text-sm mb-4 text-brand-ink/70">快速导航</h4>
+          <div class="flex flex-col gap-2.5">
+            <a href="index.html" class="text-sm text-brand-ink/45 hover:text-brand-teal transition-colors duration-300">首页</a>
+            <a href="about.html" class="text-sm text-brand-ink/45 hover:text-brand-teal transition-colors duration-300">关于我们</a>
+            <a href="routes.html" class="text-sm text-brand-ink/45 hover:text-brand-teal transition-colors duration-300">路线推荐</a>
+          </div>
+        </div>
+
+        <!-- 联系方式列 -->
+        <div>
+          <h4 class="font-medium text-sm mb-4 text-brand-ink/70">联系方式</h4>
+          <div class="flex flex-col gap-2.5">
+            <span class="text-sm text-brand-ink/45 flex items-center gap-2">
+              <i class="ph ph-phone text-brand-teal"></i>
+              15809919935
+            </span>
+            <span class="text-sm text-brand-ink/45 flex items-center gap-2">
+              <i class="ph ph-envelope text-brand-teal"></i>
+              471181909@qq.com
+            </span>
+            <span class="text-sm text-brand-ink/45 flex items-center gap-2">
+              <i class="ph ph-map-pin text-brand-teal"></i>
+              乌鲁木齐市新市区北京南路895号豪威大厦21层
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 版权 -->
+      <div class="mt-12 pt-6 border-t border-brand-ink/5 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-xs text-brand-ink/30">
+          2026 新疆高铁国际旅行社 版权所有
+        </p>
+        <p class="text-xs text-brand-ink/30">
+          备案号: 新ICP备XXXXXXXX号
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 全局脚本 -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

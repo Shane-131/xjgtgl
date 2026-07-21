@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="了解新疆高铁国际旅行社 - 专业新疆旅游服务商，二十载深耕，用心连接每一段天山旅途。">
+  <title>关于我们 | 新疆高铁国际旅行社</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              ink: '#1a2a3a',
+              teal: '#0d9488',
+              'teal-light': '#14b8a6',
+              gold: '#d4a574',
+              'gold-light': '#e8cfa6',
+              warm: '#fafaf8',
+            }
+          },
+          fontFamily: {
+            serif: ['Noto Serif SC', 'serif'],
+            sans: ['Noto Sans SC', 'sans-serif'],
+            display: ['Geist', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-brand-warm text-brand-ink font-sans antialiased">
+
+  <!-- 导航栏 -->
+  <nav id="mainNav" class="nav-glass fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 md:h-20">
+        <a href="index.html" class="flex items-center group">
+          <img src="assets/images/logo.png" alt="新疆高铁国旅" class="h-14 md:h-16 w-auto transition-transform duration-300 group-hover:scale-105">
+        </a>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="text-sm font-medium text-brand-ink/70 hover:text-brand-teal transition-colors duration-300">首页</a>
+          <a href="about.html" class="text-sm font-medium text-brand-teal transition-colors duration-300">关于我们</a>
+          <a href="routes.html" class="text-sm font-medium text-brand-ink/70 hover:text-brand-teal transition-colors duration-300">路线推荐</a>
+          <a href="login.html" class="btn-primary text-sm !py-2 !px-5">登录 <i class="ph ph-arrow-right text-sm"></i></a>
+        </div>
+        <button id="menuToggle" class="md:hidden relative w-10 h-10 flex items-center justify-center" aria-label="菜单">
+          <div class="flex flex-col gap-1.5">
+            <span class="block w-5 h-px bg-brand-ink transition-all duration-300"></span>
+            <span class="block w-5 h-px bg-brand-ink transition-all duration-300"></span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div id="mobileMenu" class="hidden fixed inset-0 z-40 bg-brand-warm/95 backdrop-blur-xl flex flex-col items-center justify-center gap-8">
+    <a href="index.html" class="text-2xl font-serif text-brand-ink/70">首页</a>
+    <a href="about.html" class="text-2xl font-serif text-brand-teal">关于我们</a>
+    <a href="routes.html" class="text-2xl font-serif text-brand-ink/70">路线推荐</a>
+    <a href="login.html" class="btn-primary text-lg mt-4">登录</a>
+  </div>
+
+  <!-- 主内容 -->
+  <main class="page-enter pt-20">
+
+    <!-- 页面标题 -->
+    <section class="py-16 md:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center gap-2 text-sm text-brand-ink/40 mb-6">
+          <a href="index.html" class="hover:text-brand-teal transition-colors duration-300">首页</a>
+          <i class="ph ph-caret-right text-xs"></i>
+          <span class="text-brand-ink/60">关于我们</span>
+        </div>
+        <h1 class="font-serif text-4xl md:text-6xl lg:text-7xl tracking-tighter leading-none mb-4">
+          关于我们
+        </h1>
+        <p class="text-brand-ink/45 text-lg max-w-lg">
+          二十载深耕新疆旅游，用心连接每一段旅途
+        </p>
+      </div>
+    </section>
+
+    <!-- 公司介绍：左文字右图片 -->
+    <section class="pb-24 md:pb-32 reveal">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <div class="order-2 lg:order-1">
+            <p class="text-brand-ink/60 leading-relaxed mb-5 max-w-[60ch]">
+              新疆高铁国际旅行社有限责任公司（以下简称高铁国旅）成立于 2012 年 2 月，总社位于新疆维吾尔自治区首府乌鲁木齐市新市区，下设组团、地接、线上运营、铁路客票代售业务、行政财务部等 5 个部门和 1 个行政财务管理部门。下属阿克苏、喀什分公司。
+            </p>
+            <p class="text-brand-ink/60 leading-relaxed mb-5 max-w-[60ch]">
+              高铁国旅拥有丰富的铁路资源，常年组团开行旅游专列、图定列车、包机旅游。组团、地接等旅游接待业务规模不断屡创新高。公司致力于新疆铁路旅游品牌建设，实施"坐着火车游新疆"品牌战略，持续打造和不断丰富完善北疆、南疆、高铁、动车等系列旅游产品。
+            </p>
+            <p class="text-brand-ink/60 leading-relaxed max-w-[60ch]">
+              在多年的专列、包机等大型团队地接服务中，高铁国旅拥有极为丰富的旅客运输、住宿、餐饮、导游、景区等资源。本着质量第一、品质第一的宗旨，让组团社满意、让游客满意，始终保持零投诉，深受专列、包机等大型团队组团社好评。
+            </p>
+          </div>
+          <div class="order-1 lg:order-2">
+            <div class="relative">
+              <div class="bg-brand-gold/10 rounded-3xl p-1.5">
+                <div class="rounded-[calc(1.5rem-0.375rem)] overflow-hidden aspect-[4/5] inner-highlight bg-white">
+                  <img src="https://picsum.photos/seed/xinjiang-travel-team/800/1000" alt="高铁国旅团队" class="w-full h-full object-cover" loading="lazy">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 发展历程时间线 -->
+    <section class="pb-24 md:pb-32 reveal">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="font-serif text-3xl md:text-5xl tracking-tight leading-tight mb-14 md:mb-20">发展历程</h2>
+
+        <div class="relative max-w-3xl mx-auto">
+          <!-- 中轴线 -->
+          <div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-brand-gold/30"></div>
+
+          <div class="space-y-12">
+            <!-- 2012 -->
+            <div class="relative pl-12 md:pl-0 md:grid md:grid-cols-2 md:gap-8 items-start">
+              <div class="md:text-right md:pr-10">
+                <span class="font-display text-3xl font-semibold text-brand-teal">2012</span>
+              </div>
+              <div class="relative md:pl-10 mt-2 md:mt-0">
+                <div class="absolute left-[-2rem] md:left-[-0.35rem] top-2.5 w-2.5 h-2.5 rounded-full bg-brand-teal ring-4 ring-brand-warm"></div>
+                <h3 class="font-serif text-lg mb-1">公司成立</h3>
+                <p class="text-brand-ink/50 text-sm leading-relaxed">于乌鲁木齐市新市区注册成立，获得国家旅游局经营许可，开启新疆旅游服务</p>
+              </div>
+            </div>
+
+            <!-- 2015 -->
+            <div class="relative pl-12 md:pl-0 md:grid md:grid-cols-2 md:gap-8 items-start">
+              <div class="md:text-right md:pr-10">
+                <span class="font-display text-3xl font-semibold text-brand-teal">2015</span>
+              </div>
+              <div class="relative md:pl-10 mt-2 md:mt-0">
+                <div class="absolute left-[-2rem] md:left-[-0.35rem] top-2.5 w-2.5 h-2.5 rounded-full bg-brand-teal ring-4 ring-brand-warm"></div>
+                <h3 class="font-serif text-lg mb-1">品牌战略启动</h3>
+                <p class="text-brand-ink/50 text-sm leading-relaxed">依托兰新高铁开通契机，实施"坐着火车游新疆"品牌战略，推出北疆、南疆、高铁、动车系列旅游产品</p>
+              </div>
+            </div>
+
+            <!-- 2018 -->
+            <div class="relative pl-12 md:pl-0 md:grid md:grid-cols-2 md:gap-8 items-start">
+              <div class="md:text-right md:pr-10">
+                <span class="font-display text-3xl font-semibold text-brand-teal">2018</span>
+              </div>
+              <div class="relative md:pl-10 mt-2 md:mt-0">
+                <div class="absolute left-[-2rem] md:left-[-0.35rem] top-2.5 w-2.5 h-2.5 rounded-full bg-brand-teal ring-4 ring-brand-warm"></div>
+                <h3 class="font-serif text-lg mb-1">规模扩张</h3>
+                <p class="text-brand-ink/50 text-sm leading-relaxed">设立阿克苏、喀什分公司，旅游专列、包机等大型团队地接服务屡创新高</p>
+              </div>
+            </div>
+
+            <!-- 2021 -->
+            <div class="relative pl-12 md:pl-0 md:grid md:grid-cols-2 md:gap-8 items-start">
+              <div class="md:text-right md:pr-10">
+                <span class="font-display text-3xl font-semibold text-brand-teal">2021</span>
+              </div>
+              <div class="relative md:pl-10 mt-2 md:mt-0">
+                <div class="absolute left-[-2rem] md:left-[-0.35rem] top-2.5 w-2.5 h-2.5 rounded-full bg-brand-teal ring-4 ring-brand-warm"></div>
+                <h3 class="font-serif text-lg mb-1">品质标杆</h3>
+                <p class="text-brand-ink/50 text-sm leading-relaxed">大团队地接服务连续保持零投诉记录，获评新疆十佳旅行社、诚信经营示范单位</p>
+              </div>
+            </div>
+
+            <!-- 2025 -->
+            <div class="relative pl-12 md:pl-0 md:grid md:grid-cols-2 md:gap-8 items-start">
+              <div class="md:text-right md:pr-10">
+                <span class="font-display text-3xl font-semibold text-brand-teal">2025</span>
+              </div>
+              <div class="relative md:pl-10 mt-2 md:mt-0">
+                <div class="absolute left-[-2rem] md:left-[-0.35rem] top-2.5 w-2.5 h-2.5 rounded-full bg-brand-teal ring-4 ring-brand-warm"></div>
+                <h3 class="font-serif text-lg mb-1">全域发展</h3>
+                <p class="text-brand-ink/50 text-sm leading-relaxed">下设 5 大业务部门，业务覆盖全疆各地州，积极开发区域性全域旅游资源，助力地方旅游经济发展</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 核心优势 -->
+    <section class="pb-24 md:pb-32 reveal">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="font-serif text-3xl md:text-5xl tracking-tight leading-tight mb-14 md:mb-20">核心优势</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div class="bg-white rounded-3xl p-7 md:p-9 shadow-card inner-highlight transition-brand hover:shadow-card-hover group">
+            <div class="w-12 h-12 rounded-2xl bg-brand-teal/10 flex items-center justify-center mb-5 transition-colors duration-300 group-hover:bg-brand-teal/15">
+              <i class="ph ph-users-three text-brand-teal text-2xl"></i>
+            </div>
+            <h3 class="font-serif text-xl mb-3 tracking-tight">专业团队</h3>
+            <p class="text-brand-ink/50 text-sm leading-relaxed max-w-[50ch]">百余名持证导游和旅行定制师，平均从业经验超过 8 年，对新疆的每一处风景如数家珍</p>
+          </div>
+
+          <div class="bg-white rounded-3xl p-7 md:p-9 shadow-card inner-highlight transition-brand hover:shadow-card-hover group">
+            <div class="w-12 h-12 rounded-2xl bg-brand-teal/10 flex items-center justify-center mb-5 transition-colors duration-300 group-hover:bg-brand-teal/15">
+              <i class="ph ph-map-pin-line text-brand-teal text-2xl"></i>
+            </div>
+            <h3 class="font-serif text-xl mb-3 tracking-tight">本地资源优势</h3>
+            <p class="text-brand-ink/50 text-sm leading-relaxed max-w-[50ch]">与全疆各大景区、星级酒店、特色民宿建立深度合作，为您争取最优价格和独家体验</p>
+          </div>
+
+          <div class="bg-white rounded-3xl p-7 md:p-9 shadow-card inner-highlight transition-brand hover:shadow-card-hover group">
+            <div class="w-12 h-12 rounded-2xl bg-brand-teal/10 flex items-center justify-center mb-5 transition-colors duration-300 group-hover:bg-brand-teal/15">
+              <i class="ph ph-shield-checkered text-brand-teal text-2xl"></i>
+            </div>
+            <h3 class="font-serif text-xl mb-3 tracking-tight">全方位安全保障</h3>
+            <p class="text-brand-ink/50 text-sm leading-relaxed max-w-[50ch]">全程高额旅游保险、正规旅游车辆、专业应急救援体系，让您安心享受每一段旅程</p>
+          </div>
+
+          <div class="bg-white rounded-3xl p-7 md:p-9 shadow-card inner-highlight transition-brand hover:shadow-card-hover group">
+            <div class="w-12 h-12 rounded-2xl bg-brand-teal/10 flex items-center justify-center mb-5 transition-colors duration-300 group-hover:bg-brand-teal/15">
+              <i class="ph ph-star text-brand-teal text-2xl"></i>
+            </div>
+            <h3 class="font-serif text-xl mb-3 tracking-tight">定制化服务</h3>
+            <p class="text-brand-ink/50 text-sm leading-relaxed max-w-[50ch]">从亲子研学、银发康养到高端私享，为每一种旅行需求提供一对一定制方案</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 资质展示 -->
+    <section class="pb-24 md:pb-32 reveal">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="font-serif text-3xl md:text-5xl tracking-tight leading-tight mb-14 md:mb-20">资质与荣誉</h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div class="bg-white rounded-3xl p-7 shadow-card inner-highlight text-center transition-brand hover:shadow-card-hover">
+            <div class="w-14 h-14 rounded-2xl bg-brand-teal/10 flex items-center justify-center mx-auto mb-4">
+              <i class="ph ph-certificate text-brand-teal text-2xl"></i>
+            </div>
+            <h4 class="font-serif text-base mb-1">旅行社经营许可证</h4>
+            <p class="text-brand-ink/35 text-xs">国家旅游局颁发</p>
+          </div>
+
+          <div class="bg-white rounded-3xl p-7 shadow-card inner-highlight text-center transition-brand hover:shadow-card-hover">
+            <div class="w-14 h-14 rounded-2xl bg-brand-teal/10 flex items-center justify-center mx-auto mb-4">
+              <i class="ph ph-medal text-brand-teal text-2xl"></i>
+            </div>
+            <h4 class="font-serif text-base mb-1">新疆十佳旅行社</h4>
+            <p class="text-brand-ink/35 text-xs">自治区旅游局评定</p>
+          </div>
+
+          <div class="bg-white rounded-3xl p-7 shadow-card inner-highlight text-center transition-brand hover:shadow-card-hover">
+            <div class="w-14 h-14 rounded-2xl bg-brand-teal/10 flex items-center justify-center mx-auto mb-4">
+              <i class="ph ph-handshake text-brand-teal text-2xl"></i>
+            </div>
+            <h4 class="font-serif text-base mb-1">诚信经营示范单位</h4>
+            <p class="text-brand-ink/35 text-xs">中国旅游协会认定</p>
+          </div>
+
+          <div class="bg-white rounded-3xl p-7 shadow-card inner-highlight text-center transition-brand hover:shadow-card-hover">
+            <div class="w-14 h-14 rounded-2xl bg-brand-teal/10 flex items-center justify-center mx-auto mb-4">
+              <i class="ph ph-globe text-brand-teal text-2xl"></i>
+            </div>
+            <h4 class="font-serif text-base mb-1">国际旅游服务资质</h4>
+            <p class="text-brand-ink/35 text-xs">出入境旅游许可</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 页脚 -->
+  <footer class="border-t border-brand-ink/5 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+        <div class="md:col-span-2">
+          <a href="index.html" class="flex items-center mb-4">
+            <img src="assets/images/logo.png" alt="新疆高铁国旅" class="h-9 w-auto">
+          </a>
+          <p class="text-brand-ink/45 text-sm leading-relaxed max-w-sm">新疆高铁国际旅行社，专注新疆旅游服务。以专业和热忱，连接每一位旅者与天山的壮美。</p>
+        </div>
+        <div>
+          <h4 class="font-medium text-sm mb-4 text-brand-ink/70">快速导航</h4>
+          <div class="flex flex-col gap-2.5">
+            <a href="index.html" class="text-sm text-brand-ink/45 hover:text-brand-teal transition-colors duration-300">首页</a>
+            <a href="about.html" class="text-sm text-brand-ink/45 hover:text-brand-teal transition-colors duration-300">关于我们</a>
+            <a href="routes.html" class="text-sm text-brand-ink/45 hover:text-brand-teal transition-colors duration-300">路线推荐</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-medium text-sm mb-4 text-brand-ink/70">联系方式</h4>
+          <div class="flex flex-col gap-2.5">
+            <span class="text-sm text-brand-ink/45 flex items-center gap-2"><i class="ph ph-phone text-brand-teal"></i>15809919935</span>
+            <span class="text-sm text-brand-ink/45 flex items-center gap-2"><i class="ph ph-envelope text-brand-teal"></i>471181909@qq.com</span>
+            <span class="text-sm text-brand-ink/45 flex items-center gap-2"><i class="ph ph-map-pin text-brand-teal"></i>乌鲁木齐市新市区北京南路895号豪威大厦21层</span>
+          </div>
+        </div>
+      </div>
+      <div class="mt-12 pt-6 border-t border-brand-ink/5 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-xs text-brand-ink/30">2026 新疆高铁国际旅行社 版权所有</p>
+        <p class="text-xs text-brand-ink/30">备案号: 新ICP备XXXXXXXX号</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
