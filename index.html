@@ -6,13 +6,18 @@
   <meta name="description" content="新疆高铁国际旅行社 - 专业新疆旅游服务，提供精品路线、定制旅行、团体接待。探索壮美新疆，从高铁国旅开始。">
   <title>新疆高铁国际旅行社 | 探索壮美新疆</title>
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- 国内友好字体：系统中文字体 + Geist 自托管 -->
+  <style>
+    @font-face {
+      font-family: 'Geist';
+      src: local('Geist'), local('system-ui');
+      font-weight: 400 600;
+      font-display: swap;
+    }
+  </style>
 
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Tailwind CSS CDN（国内可用镜像） -->
+  <script src="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.10/dist/tailwind.min.js"></script>
   <script>
     tailwind.config = {
       theme: {
@@ -37,8 +42,8 @@
     }
   </script>
 
-  <!-- Phosphor Icons -->
-  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+  <!-- Phosphor Icons（国内可用镜像） -->
+  <script src="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/index.min.js"></script>
 
   <!-- 自定义样式 -->
   <link rel="stylesheet" href="assets/css/style.css">
@@ -100,11 +105,15 @@
       <video
         class="absolute inset-0 w-full h-full object-cover"
         src="assets/video/hero.mp4"
+        poster="https://picsum.photos/seed/xinjiang-hero/1200/800"
         autoplay
         muted
         loop
         playsinline
+        webkit-playsinline
         preload="auto"
+        width="1920"
+        height="1080"
       ></video>
 
       <!-- 叠加渐变层，确保文字可读 -->
