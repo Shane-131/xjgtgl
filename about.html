@@ -6,11 +6,17 @@
   <meta name="description" content="了解新疆高铁国际旅行社 - 专业新疆旅游服务商，二十载深耕，用心连接每一段天山旅途。">
   <title>关于我们 | 新疆高铁国际旅行社</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- 国内友好字体：系统中文字体 -->
+  <style>
+    @font-face {
+      font-family: 'Geist';
+      src: local('Geist'), local('system-ui');
+      font-weight: 400 600;
+      font-display: swap;
+    }
+  </style>
 
-  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tailwind.min.js"></script>
   <script>
     tailwind.config = {
       theme: {
@@ -35,7 +41,7 @@
     }
   </script>
 
-  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+  <script src="assets/js/icons.js"></script>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body class="bg-brand-warm text-brand-ink font-sans antialiased">
