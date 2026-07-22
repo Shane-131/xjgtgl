@@ -101,23 +101,38 @@
          视频背景占位 + Slogan + CTA
          ====================================== -->
     <section class="relative min-h-[100dvh] flex items-end pb-16 md:pb-0 md:items-center overflow-hidden">
-      <!-- Hero 视频背景 -->
-      <video
-        class="absolute inset-0 w-full h-full object-cover"
-        src="assets/video/hero.mp4"
-        poster="https://picsum.photos/seed/xinjiang-hero/1200/800"
-        autoplay
-        muted
-        loop
-        playsinline
-        webkit-playsinline
-        preload="auto"
-        width="1920"
-        height="1080"
-      ></video>
+      <!-- Hero 视频背景（移动端兼容） -->
+      <div class="absolute inset-0 bg-brand-ink">
+        <video
+          class="absolute inset-0 w-full h-full object-cover"
+          src="assets/video/hero.mp4"
+          poster="https://picsum.photos/seed/xinjiang-hero/1200/800"
+          autoplay
+          muted
+          loop
+          playsinline
+          webkit-playsinline
+          disableRemotePlayback
+          x-webkit-airplay="deny"
+          preload="metadata"
+        ></video>
+      </div>
+      <!-- JS 兜底：移动端视频无法自动播放时显示背景色 -->
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          var v = document.querySelector('video[src*="hero"]');
+          if (v) {
+            v.play().catch(function() {
+              v.parentElement.style.backgroundImage = "url('https://picsum.photos/seed/xinjiang-hero/1200/800')";
+              v.parentElement.style.backgroundSize = 'cover';
+              v.parentElement.style.backgroundPosition = 'center';
+            });
+          }
+        });
+      </script>
 
       <!-- 叠加渐变层，确保文字可读 -->
-      <div class="absolute inset-0 bg-gradient-to-b from-blue-900/40 via-blue-950/30 to-blue-950/70"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-blue-900/40 via-blue-950/30 to-blue-950/70 pointer-events-none"></div>
 
       <!-- 内容 -->
       <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24">
